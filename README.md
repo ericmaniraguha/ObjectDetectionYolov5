@@ -18,8 +18,18 @@ conda activate yolov5  # Activate environment
 # 3. Install Requirements:
 pip install -r requirements.txt  # Install requirements
 
-# 4. Run Detection Script:
-python detect.py --source 0  # Run detection with Camera 0
+# 4. Run Detection Script with Local Video:
+python detect.py --weights yolov5x.pt --source "E:\Computer Vision\video\01.mp4" --view -img
+
+# Additional Options:
+# - Adjust confidence threshold to 0.5 to filter detections:
+python detect.py --weights yolov5x.pt --source "E:\Computer Vision\video\01.mp4" --conf-thres 0.5 --view-img
+
+# - Adjust IoU (Intersection over Union) threshold to 0.5:
+python detect.py --weights yolov5x.pt --source "E:\Computer Vision\video\01.mp4" --iou-thres 0.5 --view-img
+
+# - Set both confidence and IoU thresholds to 0.5:
+python detect.py --weights yolov5x.pt --source "E:\Computer Vision\video\01.mp4" --conf-thres 0.5 --iou-thres 0.5 --view-img
 
 This is working on pre-trained weight.
 ```
