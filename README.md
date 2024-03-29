@@ -12,13 +12,22 @@ conda create --name yolov5  # Create environment
 conda activate yolov5  # Activate environment
 
 ```
-# Ensure that you have at least Python version 3.7 installed.
 
-```bash
+# Follow these steps to configure YOLOv5 to detect objects using Camera 0:
+```batch
 # 3. Install Requirements:
 pip install -r requirements.txt  # Install requirements
 
-# 4. Run Detection Script with Local Video:
+# 4. Run Detection Script:
+python detect.py --source 0  # Run detection with Camera 0
+```
+
+# Ensure that you have at least Python version 3.7 installed.
+
+```bash
+
+
+# 5. Run Detection Script with Local Video:
 python detect.py --weights yolov5x.pt --source "E:\Computer Vision\video\01.mp4" --view -img
 
 # Additional Options:
