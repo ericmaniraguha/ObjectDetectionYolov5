@@ -21,4 +21,5 @@ pip install -r requirements.txt  # Install requirements
 # 4. Run Detection Script:
 python detect.py --source 0  # Run detection with Camera 0
 
+This is working on pre-trained weight.
 ```
